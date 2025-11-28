@@ -1,0 +1,8 @@
+{
+    "services": {
+        "dummy": {
+            "name": "Dummy Service",
+            "description": "A dummy service for testing purposes."
+        }
+    }
+}
