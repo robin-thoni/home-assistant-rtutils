@@ -1,0 +1,11 @@
+{
+  "domain": "rtutils",
+  "name": "RT Utils",
+  "codeowners": ["@robin-thoni"],
+  "config_flow": true,
+  "documentation": "https://github.com/robin-thoni/home-assistant-rtutils",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/robin-thoni/home-assistant-rtutils/issues",
+  "single_config_entry": true,
+  "version": "0.1.0"
+}
