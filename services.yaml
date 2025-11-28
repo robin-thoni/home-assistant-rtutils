@@ -1,1 +1,9 @@
 dummy:
+
+load_yaml:
+  fields:
+    data:
+      required: true
+      selector:
+        text:
+          multiline: True

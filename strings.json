@@ -3,6 +3,16 @@
         "dummy": {
             "name": "Dummy Service",
             "description": "A dummy service for testing purposes."
+        },
+        "load_yaml": {
+            "name": "Load YAML Data",
+            "description": "Service to load and process YAML data provided in the service call.",
+            "fields": {
+                "data": {
+                    "name": "Data",
+                    "description": "YAML formatted string data to be processed."
+                }
+            }
         }
     }
 }
