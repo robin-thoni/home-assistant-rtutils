@@ -13,6 +13,28 @@
                     "description": "YAML formatted string data to be processed."
                 }
             }
+        },
+        "svg_to_png": {
+            "name": "Convert SVG to PNG",
+            "description": "Service to convert an SVG file to a PNG file.",
+            "fields": {
+                "svg_path": {
+                    "name": "SVG Path",
+                    "description": "Path to the source SVG file."
+                },
+                "png_path": {
+                    "name": "PNG Path",
+                    "description": "Path where the output PNG file will be saved."
+                },
+                "png_width": {
+                    "name": "PNG Width",
+                    "description": "Optional width for the output PNG file."
+                },
+                "png_height": {
+                    "name": "PNG Height",
+                    "description": "Optional height for the output PNG file."
+                }
+            }
         }
     }
 }
