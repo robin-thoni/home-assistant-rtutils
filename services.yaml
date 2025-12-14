@@ -7,3 +7,26 @@ load_yaml:
       selector:
         text:
           multiline: True
+
+svg_to_png:
+  fields:
+    svg_path:
+      required: true
+      selector:
+        text:
+    png_path:
+      required: true
+      selector:
+        text:
+    png_width:
+      required: false
+      selector:
+        number:
+          min: 1
+          unit_of_measurement: px
+    png_height:
+      required: false
+      selector:
+        number:
+          min: 1
+          unit_of_measurement: px
