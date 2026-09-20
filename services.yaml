@@ -7,6 +7,10 @@ load_yaml:
       selector:
         text:
           multiline: True
+    multiple_documents:
+      required: False
+      selector:
+        boolean:
 
 svg_to_png:
   fields:

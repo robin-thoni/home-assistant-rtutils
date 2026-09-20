@@ -22,6 +22,7 @@ from .const import (
     SERVICE_DUMMY,
     SERVICE_LOAD_YAML,
     ATTR_SERVICE_LOAD_YAML_DATA,
+    ATTR_SERVICE_LOAD_YAML_MULTI_DOCS,
     SERVICE_SVG_TO_PNG,
     ATTR_SERVICE_SVG_TO_PNG_SRC,
     ATTR_SERVICE_SVG_TO_PNG_DST,
@@ -34,7 +35,12 @@ def dummy(service: ServiceCall) -> None:
 
 
 def load_yaml(service: ServiceCall) -> dict:
-    data_dict = yaml.safe_load(service.data[ATTR_SERVICE_LOAD_YAML_DATA])
+    if service.data.get(ATTR_SERVICE_LOAD_YAML_MULTI_DOCS, False):
+        data_dict = {
+            'documents': list(yaml.safe_load_all(service.data[ATTR_SERVICE_LOAD_YAML_DATA])),
+        }
+    else:
+        data_dict = yaml.safe_load(service.data[ATTR_SERVICE_LOAD_YAML_DATA])
     return data_dict
 
 
@@ -74,6 +80,7 @@ def async_setup_services(hass: HomeAssistant) -> None:
         schema=vol.Schema(
             {
                 vol.Required(ATTR_SERVICE_LOAD_YAML_DATA): cv.string,
+                vol.Optional(ATTR_SERVICE_LOAD_YAML_MULTI_DOCS, default=False): cv.boolean,
             }
         ),
         supports_response=SupportsResponse.ONLY,
