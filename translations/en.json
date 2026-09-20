@@ -11,6 +11,10 @@
                 "data": {
                     "name": "Data",
                     "description": "YAML formatted string data to be processed."
+                },
+                "multiple_documents": {
+                    "name": "Multiple Documents",
+                    "description": "Load multiple YAML documents."
                 }
             }
         },

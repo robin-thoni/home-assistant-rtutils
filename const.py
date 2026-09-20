@@ -10,6 +10,7 @@ SERVICE_DUMMY = "dummy"
 SERVICE_LOAD_YAML = "load_yaml"
 
 ATTR_SERVICE_LOAD_YAML_DATA = "data"
+ATTR_SERVICE_LOAD_YAML_MULTI_DOCS = "multiple_documents"
 
 SERVICE_SVG_TO_PNG = "svg_to_png"
 
